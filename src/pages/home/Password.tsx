@@ -51,7 +51,7 @@ const Password = (props: PasswordProps) => {
           direction={{ "@initial": "column", "@sm": "row" }}
           columnGap="$1"
         >
-          {props.children}
+          <Text>{t("该文件夹不公开，请前往组织获取权限")}</Text>
         </Flex>
         <HStack spacing="$2">
           <Button colorScheme="neutral" onClick={back}>

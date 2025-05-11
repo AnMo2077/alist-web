@@ -145,8 +145,8 @@ const Profile = () => {
               }}
             >
               <AlertIcon mr="$2_5" />
-              <AlertTitle mr="$2_5">{t("users.guest-tips")}</AlertTitle>
-              <AlertDescription>{t("users.modify_nothing")}</AlertDescription>
+              <Text>{t("竟然找到了后台入口吗，有点意思，但不好意思不公开")}</Text>
+              <Text>{t("点击左侧回到主页")}</Text>
             </Alert>
             <HStack spacing="$2">
               <Text>{t("global.have_account")}</Text>
@@ -214,7 +214,7 @@ const Profile = () => {
             <Button
               colorScheme="accent"
               onClick={() => {
-                to("/@manage/2fa")
+                to("/@panel/2fa")
               }}
             >
               {t("users.enable_2fa")}

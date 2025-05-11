@@ -91,7 +91,7 @@ const App: Component = () => {
             <Route path="/@test" component={Test} />
             <Route path="/@login" component={Login} />
             <Route
-              path="/@manage/*"
+              path="/@panel/*"
               element={
                 <MustUser>
                   <Manage />

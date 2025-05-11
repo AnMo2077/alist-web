@@ -43,7 +43,7 @@ const Login = () => {
   const logo = useColorModeValue(logos[0], logos.pop())
   const t = useT()
   const title = createMemo(() => {
-    return `${t("login.login_to")} ${getSetting("site_title")}`
+    return `${getSetting("site_title")}`
   })
   useTitle(title)
   const bgColor = useColorModeValue("white", "$neutral1")
@@ -108,7 +108,7 @@ const Login = () => {
       PublicKeyCredential &&
       "isConditionalMediationAvailable" in PublicKeyCredential
     ) {
-      // @ts-expect-error
+// 移除未使用的 @ts-expect-error 指令，因为没有实际需要忽略的类型错误
       return await PublicKeyCredential.isConditionalMediationAvailable()
     } else {
       return false
@@ -144,7 +144,7 @@ const Login = () => {
         const options = parseRequestOptionsFromJSON(data.options)
         options.signal = controller.signal
         if (conditional) {
-          // @ts-expect-error
+// 移除未使用的 @ts-expect-error 指令，此处无实际需要忽略的类型错误
           options.mediation = "conditional"
         }
         const credentials = await get(options)

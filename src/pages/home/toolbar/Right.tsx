@@ -11,7 +11,7 @@ import { AiOutlineCloudUpload, AiOutlineSetting } from "solid-icons/ai"
 import { RiSystemRefreshLine } from "solid-icons/ri"
 import { usePath } from "~/hooks"
 import { Motion } from "@motionone/solid"
-import { isTocVisible, setTocDisabled } from "~/components"
+import { isTocVisible, setTocDisabled, SwitchColorMode } from "~/components"
 import { BiSolidBookContent } from "solid-icons/bi"
 
 export const Right = () => {
@@ -143,6 +143,7 @@ export const Right = () => {
                 bus.emit("tool", "local_settings")
               }}
             />
+            <SwitchColorMode />
           </VStack>
           <RightIcon tips="more" as={CgMoreO} onClick={onToggle} />
         </VStack>
